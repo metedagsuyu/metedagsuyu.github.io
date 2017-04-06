@@ -18,6 +18,11 @@ font-size: 16px;
   background-color: #403F45;
  font-family: 'Open Sans', sans-serif;
   } /* = 16px */
+[class*='col-'] {
+    float: left;
+    margin: 0 2% 2% 0;
+    display: block;
+}
 
 /*  Typograhical Scales  */		
 h1,h2,h3{
@@ -28,6 +33,7 @@ h2 {font-size:1.5rem;}
 
 header{background-color:rgb(235, 213, 135);
 	height:45rem;
+
 	}
 header img, header h1, header p, header nav,header nav span, section, footer, main section, main span:nth-child(5), main span:nth-child(6), main span:nth-child(7), div{
 	position:relative;
@@ -39,9 +45,10 @@ main h3, section div span, section div p, section img, footer img, footer div, h
 header h1{
 	top:1.8rem;
 	color:#A42721;
+	animation: 1.5s ease-out 0s 1 dropHeader;
 }
 header h1 span{
-	color:#58546b;
+	color:#64264B;
 }
 header h2{
 	display:inline;
@@ -62,6 +69,9 @@ header img{
 header nav span{
 	top:0.2rem;
 }
+header ul{
+	animation: 1.5s ease-out 0s 1 dropHeader;
+}
 header ul li{
 	
 	width:4.5rem;
@@ -81,6 +91,7 @@ header li ul i, section div span, footer p, main section:nth-of-type(2) h3  {
 	top:3rem;
 }
 header li:hover ul {display:block; width:100%;
+	height:6.1rem;
 	margin:0 auto;
 	padding: 0 3rem;
 	background: #403F45;
@@ -112,14 +123,15 @@ header ul li ul li img{
 
 
 main{
-	margin:10rem auto 0 auto;
+	margin:11rem auto 0 auto;
 	width:90%;
 
 }
 main h2, main h3{
+
 	text-align: left;
 	letter-spacing: 0.3rem;
-	font-size:2.2rem;
+	font-size:3rem;
 	color:#E49250;
 }
 main h3{
@@ -128,91 +140,63 @@ main h3{
 	font-weight:bold;
 	}
 
-section div span {
-	background:#E58E42;
-	padding:.1rem .8rem;
-	font-size:1.2rem;
 
-}
-
-div h3{
-	padding:2rem;
-	font-size:2rem;
-	font-variant:small-caps;
-	background: rgba(50,50,50,0.3);
-	color:white;
-	height:64px;
-}
-div img{
-	margin: 1rem;
-	position:absolute;
-	right:2rem;
-	bottom:2rem;
-}
-div p{
-	position:absolute;
-	bottom:1rem;
-	padding:0 3rem;
-}
-section{
-	margin:0 auto;
-}
-section div {
+main ul {
 	display:inline-block;
-	height:17rem;
-	width:40vw;
 	min-width:110px;
-	float:left;
 	margin:2rem 1.66666vw;
 }
-section div:first-of-type{
-	background-color: #626262;
-	background-position: right;
-	background-repeat: no-repeat;
-	background-size:90% 90%;
-}
-section div:first-child, section div:last-child {
-	background: #949494;
+main ul li{
+	background: #83D313;
 	color:black;
+	font-size: 8vw;
+	font-weight: bold;
+	margin-top: 10rem !important;
+	padding:1rem;
 }
-section div{
-	background: #DDDDDD;
+main ul li:first-child
+{
 	color:white;
+	background: #858585;
+}
+main ul li:nth-of-type(3) {
+	background: #5AEBAD;	
+}
+main ul li:last-child {
+	color:white;
+	background: #333333;	
+}
+main img, main ul, main ul li, main ul li img{
+	border-radius: 1rem;
+}
+main ul li img{
+	margin-top:1rem;
+	width:100%;
+}
+main ul li a{
+	width:100%;
+	text-align: center;
+	position:relative;
+	top:2.5rem;
+	font-size: 1.3rem;
+	padding:1rem 0;
+	border:1px solid white;
+	border-left-width: 0px;
+	border-right-width: 0px;
 }
 
-main section{
-	display:block;
-	margin-bottom:15rem;
-	
+li h4{
+	margin-top:6rem;
+	text-align: left;
+	font-size:1.5rem;
+}
+li p{
+	text-align: left;
+	padding:1rem 0 0 1rem;
+	font-size:1.1rem;
+	color:firebrick;
 }
 
-main span{
-	color: #E49250;
-	z-index:99999999;
-}
-footer{
-	padding:10rem 0 0 5rem;
-	background: #403F45;
-	text-align:left;
-	height:50rem;
-	margin:0 auto;
-}
-footer section{
-	float:left;
-	display:inline;
-	
-}
-footer section h3{
-	padding:5rem 0 2rem 0;
-	text-transform: uppercase;
-}
-footer section i{
-	padding:0 0.5rem;
-}
-footer i{
-	float:right; 
-	padding-right:3rem;
-	} 
 a{text-decoration: none;}
 a:link { color: #E49250 ; }
 a:visited { color: #B74083; }
@@ -240,23 +224,29 @@ h2 span:last-of-type {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
-[class*='col-'] {
-    float: left;
-    margin: 0 2% 2% 0;
-    display: block;
+
+
+section {
+	height:32rem;
 }
-
-
-
 
 nav h2:first-of-type a:-webkit-any-link{
 	cursor: url(../img/download.png) , auto;
 	z-index: 9999;
 	}
 
-section{
-	word-break: break-all;
+
+
+
+@keyframes dropHeader {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
+
 
 @media screen and (max-width: 360px){
 	.col-xs-4 {
@@ -274,7 +264,7 @@ section{
 	.gridfixXs {
     	margin-right: 0;
 	}
-	main img{
+	main  img.gridfixXs {
 		margin-top:17rem !important;
 	}
 	
@@ -296,11 +286,14 @@ section{
     	margin-right: 0;
 	}
 	main h2{
-		font-size: 4vw;
+		font-size: 4.3vw;
 	}
 	main h3{
-		font-size:3vw;
+		font-size:2.2vw;
 	}
+	main ul li{
+	font-size: 3.5vw;
+	}	
 }
 @media screen and (min-width:769px) {
 	.col-lg-4 {
@@ -318,5 +311,8 @@ section{
 
 	.gridfixLg {
    		margin-right: 0;
+	}
+	main ul li{
+	font-size: 1.8vw;
 	}
 }
