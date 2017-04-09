@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advice Generator</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="../../img/happy.png" type="image/png" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <img class="big" src="https://placeimg.com/500/400/nature"
+     alt="get lit fam" height="300" width="300" />
+
+
+        <p>Life Advice from normal people</p>
+
+
+
+
+
+        <button class="tweet" type="submit" >
+          <a class="twitter-share-button" target="_blank"
+          href="https://twitter.com/intent/tweet?text=LIFE%20ADVICE%20FROM%20NORMAL%20PEOPLE
+        ">
+            <img src="https://image.flaticon.com/icons/svg/8/8800.svg" alt="twitter logo" height="20" width="20">
+            
+          </a>
+
+        </button>
+
+
+        <button class="submit" type="submit" >Get Help</button>
+
+        <script type="text/javascript">
+            var button = document.querySelector("button.submit");
+            var tweet = document.querySelector("button.tweet");
+            var img = document.querySelector("img");
+            var p = document.querySelector("p");
+            var a = document.querySelector("a");
+            button.addEventListener("click",addFact);
+
+            function addFact(){
+             
+              $.getJSON("http://api.adviceslip.com/advice", function(json) {
+                  p.innerHTML = json.slip.advice;
+                   a.href =  'https://twitter.com/intent/tweet?hashtags=quotes,freecodecamp,metedagsuyu&related=freecodecamp&text=' + encodeURIComponent('"' + json.slip.advice + '"');
+                
+              });
+             img.src= "https://placeimg.com/500/400/nature";
+              
+
+            }
+        </script>
+</body>
+
+</html>

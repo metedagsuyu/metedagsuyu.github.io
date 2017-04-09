@@ -42,6 +42,16 @@ main h3, section div span, section div p, section img, footer img, footer div, h
 	position:absolute;
 
 }
+main h1{
+	margin-top:5rem !important;
+	margin-bottom: -25rem !important;
+}
+.proLink{
+	border:0;
+	padding:0;
+	margin:0;
+	font-size: 3rem;
+}
 header h1{
 	top:1.8rem;
 	color:#A42721;
@@ -144,29 +154,36 @@ main h3{
 main ul {
 	display:inline-block;
 	min-width:110px;
-	margin:2rem 1.66666vw;
+	margin:3rem 1.66666vw;
 }
 main ul li{
-	background: #83D313;
 	color:black;
-	font-size: 8vw;
+	font-size: 7.5vw;
 	font-weight: bold;
 	margin-top: 10rem !important;
 	padding:1rem;
 }
-main ul li:first-child
-{
-	color:white;
-	background: #858585;
-}
-main ul li:nth-of-type(3) {
+
+
+main ul li:nth-of-type(even){
 	background: #5AEBAD;	
 }
-main ul li:last-child {
-	color:white;
-	background: #333333;	
+main ul li:nth-of-type(odd) {
+	background: #83D313;	
 }
+
+main ul li:first-child{
+	background:rgba(0,0,0,0);
+	border:1px solid white;
+	margin:10rem 0;
+}
+main ul li:first-child h3{
+	position:initial;
+	line-height:2.5rem;
+}
+
 main img, main ul, main ul li, main ul li img{
+
 	border-radius: 1rem;
 }
 main ul li img{
@@ -178,8 +195,8 @@ main ul li a{
 	text-align: center;
 	position:relative;
 	top:2.5rem;
-	font-size: 1.3rem;
-	padding:1rem 0;
+	font-size: 0.9rem;
+	padding:1rem;
 	border:1px solid white;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -205,10 +222,10 @@ a:active { color: #89CD48;  }
 span a:link, span a:visited, span a:hover, span a:active, h3 span{
 color:lightblue;
 }
-h2 span{
+h2 span, main ul li:first-child h3:nth-of-type(odd) span{
 	 color:lightgreen;
 }
-h2 span:last-of-type {
+h2 span:last-of-type, main ul li:first-child h3:nth-of-type(even) span{
 	 color:pink;
 }
 
@@ -235,9 +252,27 @@ nav h2:first-of-type a:-webkit-any-link{
 	z-index: 9999;
 	}
 
-
-
-
+main ul li{
+	position: relative;
+}
+.project:last-of-type h3 {
+	position:absolute;
+	top:-5.5rem;
+	letter-spacing: 0;
+	l
+}
+.project:last-of-type a img{
+	width:auto;
+	height:auto;
+	position: relative;
+	top:-2.5rem;
+	margin:1rem;
+}
+.project:last-of-type a {
+	border: 0 solid gray;
+	padding: 0;
+	margin:0;
+}
 @keyframes dropHeader {
   0% {
     transform: translateX(-100%);
@@ -313,6 +348,6 @@ nav h2:first-of-type a:-webkit-any-link{
    		margin-right: 0;
 	}
 	main ul li{
-	font-size: 1.8vw;
+	font-size: 1.6vw;
 	}
 }
