@@ -35,10 +35,10 @@ header{background-color:rgb(235, 213, 135);
 	height:45rem;
 
 	}
-header img, header h1, header p, header nav,header nav span, section, footer, main section, main span:nth-child(5), main span:nth-child(6), main span:nth-child(7), div{
+header img, header h1, header p, header nav,header nav span, section,   main section, main span:nth-child(5), main span:nth-child(6), main span:nth-child(7), div{
 	position:relative;
 }
-main h3, section div span, section div p, section img, footer img, footer div, header li i, header li ul {
+main h3, section div span, section div p, section img,   header li i, header li ul {
 	position:absolute;
 
 }
@@ -90,7 +90,7 @@ header ul li{
 header li ul { 
 	display:none; 
 }
-header li ul i, section div span, footer p, main section:nth-of-type(2) h3  {
+header li ul i, section div span,  main section:nth-of-type(2) h3  {
 	color:white;
 }
 .network{
@@ -196,7 +196,7 @@ main ul li a{
 	position:relative;
 	top:2.5rem;
 	font-size: 0.9rem;
-	padding:1rem;
+	padding:0.5rem;
 	border:1px solid white;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -210,7 +210,7 @@ li h4{
 li p{
 	text-align: left;
 	padding:1rem 0 0 1rem;
-	font-size:1.1rem;
+	font-size:1.2rem;
 	color:firebrick;
 }
 
@@ -281,8 +281,19 @@ main ul li{
     transform: translateX(0);
   }
 }
-
-
+footer{
+	display:inline;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+iframe{
+	display:block;
+	width:90%;
+	margin:5rem auto;
+	border-radius: 1rem;
+	border-color: lightgreen;
+}
 @media screen and (max-width: 360px){
 	.col-xs-4 {
     width: 100%
@@ -324,11 +335,14 @@ main ul li{
 		font-size: 4.3vw;
 	}
 	main h3{
-		font-size:2.2vw;
+		font-size:4vw;
 	}
 	main ul li{
-	font-size: 3.5vw;
+	font-size: 3.1vw;
 	}	
+	main ul li a{
+		font-size:  2.6vw;
+	}
 }
 @media screen and (min-width:769px) {
 	.col-lg-4 {
