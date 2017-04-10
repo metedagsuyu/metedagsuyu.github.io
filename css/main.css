@@ -286,10 +286,12 @@ footer{
 	text-align: center;
 	font-size: 2rem;
 	line-height: 3rem;
+	margin:10rem 5rem;
 }
 iframe{
 	display:block;
 	width:90%;
+	height:50rem;
 	margin:5rem auto;
 	border-radius: 1rem;
 	border-color: lightgreen;
