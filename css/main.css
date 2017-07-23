@@ -212,6 +212,26 @@ main h2{
 	color: #011627;
 
 }
+.project ul{
+	height:25rem !important;  
+	background-color: rgba(255,255,255,0.8) ;
+	position:relative;
+	bottom :90%;
+	width:100%;
+	z-index: 100; 
+	right:5%;
+	padding:5px;
+}
+.project ul li{
+	list-style-type:circle;
+	padding:5px;
+	margin:20px 0 !important;
+	color:white;
+	background-color: rgba(0,0,0,0.8) !important;
+	font-size:11px !important;
+	width:100%;
+
+}
 h2 span, main ul li:first-child h3:nth-of-type(odd) span {
 	font-size: 2rem;
 	line-height: 2.5rem;
@@ -297,6 +317,8 @@ iframe {
 .info{
 		float:right;
 		margin:2rem 0;
+		position: relative;
+		z-index: 1000;
 	}
 @media screen and (max-width: 360px) {
 	.col-xs-4 {
